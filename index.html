@@ -1,0 +1,49 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Lector Markdown</title>
+    <link rel="stylesheet" href="styles.css">
+  </head>
+  <body>
+    <main class="app-shell">
+      <section class="reader-panel" aria-label="Lector de Markdown">
+        <header class="topbar">
+          <div>
+            <p class="eyebrow">Lector de Markdown (.md, .txt)</p>
+            <h1>Markdown Reader</h1>
+          </div>
+          <label class="file-button" for="fileInput">
+            <span class="file-icon" aria-hidden="true"></span>
+            Abrir archivo
+          </label>
+          <input id="fileInput" type="file" accept=".md,.markdown,.txt,text/markdown,text/plain">
+        </header>
+
+        <div id="dropZone" class="drop-zone" tabindex="0">
+          <div class="drop-copy">
+            <strong>Arrastra un archivo Markdown aqui</strong>
+            <span>o usa el boton para abrirlo desde el explorador de archivos.</span>
+          </div>
+        </div>
+
+        <section class="document-area" aria-live="polite">
+          <aside class="file-meta">
+            <span id="fileName">Sin archivo cargado</span>
+            <span id="fileStats">Esperando un archivo .md</span>
+          </aside>
+          <article id="preview" class="markdown-preview">
+            <h2>Tu documento aparecera aqui</h2>
+            <p>
+              Puedes cargar archivos <code>.md</code>, <code>.markdown</code> o <code>.txt</code>.
+              Todo se procesa en tu navegador.
+            </p>
+          </article>
+        </section>
+      </section>
+    </main>
+
+    <script src="app.js"></script>
+  </body>
+</html>
